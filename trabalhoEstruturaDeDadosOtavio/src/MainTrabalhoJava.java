@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.*;
 
-public class TrabalhoJava {
+public class MainTrabalhoJava {
     public static void main(String[] args) {
 
         // Exercício 2 - Listas dinâmicas:
