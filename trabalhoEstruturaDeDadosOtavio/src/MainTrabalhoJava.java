@@ -104,7 +104,7 @@ public class MainTrabalhoJava {
         alunoStackEx9.push(aluno1);
         alunoStackEx9.push(aluno2);
 
-        Aluno alunoRemoveStackEx9 = alunoStackEx9.removeFirst();
+        Aluno alunoRemoveStackEx9 = alunoStackEx9.pop();
 
         System.out.println(alunoRemoveStackEx9.getNome());
 
@@ -116,7 +116,7 @@ public class MainTrabalhoJava {
         alunoStackEx10.push(aluno1);
         alunoStackEx10.push(aluno2);
 
-        Aluno alunoStackRemoveEx10 = alunoStackEx10.pop();
+        Aluno alunoStackRemoveEx10 = alunoStackEx10.removeFirst();
 
         System.out.println(alunoStackRemoveEx10.getNome());
     }
