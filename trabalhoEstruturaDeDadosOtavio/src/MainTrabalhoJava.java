@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -65,24 +66,34 @@ public class MainTrabalhoJava {
         //Exercício 7 - Filas (LinkedList):
         System.out.println("Exercício 7 - Filas (LinkedList)");
 
-        LinkedList<Aluno> alunoQueueEx7 = new LinkedList<>();
+        Queue<Aluno> alunoQueueEx7 = new LinkedList<>();
 
-        alunoQueueEx7.offer(aluno1);
-        alunoQueueEx7.offer(aluno2);
+        alunoQueueEx7.add(aluno1);
+        alunoQueueEx7.add(aluno2);
 
-        Aluno alunoRemoveQueueEx7 = alunoQueueEx7.removeFirst();
+        Aluno alunoRemoveQueueEx7 = alunoQueueEx7.poll();
 
         System.out.println(alunoRemoveQueueEx7.getNome());
 
         // Exercício 8 - Filas (LinkedList):
         System.out.println("Exercício 8 - Filas (LinkedList):");
 
-        LinkedList<Aluno> alunoQueueEx8 = new LinkedList<>();
+        Queue<Aluno> alunoQueueEx8 = new LinkedList<>();
 
-        alunoQueueEx8.offer(aluno1);
-        alunoQueueEx8.offer(aluno2);
+        alunoQueueEx8.add(aluno1);
+        alunoQueueEx8.add(aluno2);
+        alunoQueueEx8.add(aluno3);
 
-        Aluno alunoRemoveQueueEx8 = alunoQueueEx8.removeLast();
+        Stack<Aluno> stackCopyQueue = new Stack<>();
+
+        stackCopyQueue.addAll(alunoQueueEx8);
+
+        Aluno alunoRemoveQueueEx8 = stackCopyQueue.pop();
+
+        alunoQueueEx8.clear();
+
+        alunoQueueEx8.addAll(stackCopyQueue);
+
         System.out.println(alunoRemoveQueueEx8.getNome());
 
         // Exercício 9 - Pilhas (Stack)
@@ -93,7 +104,7 @@ public class MainTrabalhoJava {
         alunoStackEx9.push(aluno1);
         alunoStackEx9.push(aluno2);
 
-        Aluno alunoRemoveStackEx9 = alunoStackEx9.remove(0);
+        Aluno alunoRemoveStackEx9 = alunoStackEx9.removeFirst();
 
         System.out.println(alunoRemoveStackEx9.getNome());
 
